@@ -1,0 +1,48 @@
+@prefix: ~'shadowLoading-';
+
+.@{prefix}container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  background-image: linear-gradient(45deg, rgb(84, 223, 176), rgb(67, 211, 247));
+  color: white;
+  box-shadow: 0 3px 2px 1px rgba(0, 0, 0, .2);
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -20px;
+    margin-top: -20px;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(51, 149, 230);
+    border-radius: 100%;
+    z-index: -1;
+    transform: translateY(-2px);
+  }
+
+  &::before {
+    animation: rot1 infinite 3s linear;
+  }
+
+  &::after {
+    animation: rot2 infinite 2s linear;
+  }
+}
+
+@keyframes rot1 {
+  0% {
+    transform: rotate(0deg) translateY(-2px);
+  }
+
+  100% {
+    transform: rotate(360deg) translateY(-2px);
+  }
+}

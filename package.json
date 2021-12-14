@@ -1,0 +1,43 @@
+{
+  "name": "css-icon",
+  "version": "0.1.0",
+  "description": "popular icon",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "start-storybook -p 6006",
+    "build": "build-storybook"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/800lightyears/css-icon-react.git"
+  },
+  "keywords": [
+    "icon",
+    "css"
+  ],
+  "author": "800lightyears",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/800lightyears/css-icon-react/issues"
+  },
+  "homepage": "https://github.com/800lightyears/css-icon-react#readme",
+  "devDependencies": {
+    "@babel/core": "^7.16.5",
+    "@storybook/addon-actions": "^6.4.9",
+    "@storybook/addon-essentials": "^6.4.9",
+    "@storybook/addon-links": "^6.4.9",
+    "@storybook/react": "^6.4.9",
+    "babel-loader": "^8.2.3",
+    "css-loader": "^5.0.0",
+    "less": "^4.1.2",
+    "less-loader": "^5.0.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "style-loader": "^2.0.0"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0"
+  }
+}

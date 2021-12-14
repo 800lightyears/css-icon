@@ -1,0 +1,42 @@
+@prefix: ~'openClose-';
+
+.@{prefix}container {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-image: linear-gradient(45deg, #52ffaf, #2196f3);
+  box-shadow: 0 1px 2px 1px rgba(0, 0, 0, .2);
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    margin-left: -9px;
+    margin-top: 1px;
+    width: 18px;
+    height: 3px;
+    background-color: white;
+    transition: all .2s ease;
+  }
+
+  &::before {
+    transform: translateY(11px);
+    filter: drop-shadow(0 7px 0 white);
+  }
+
+  &::after {
+    transform: translateY(24px);
+  }
+
+  &:hover::before {
+    filter: none;
+    transform: translateY(18px) rotate(-45deg);
+  }
+
+  &:hover::after {
+    transform: translateY(18px) rotate(45deg);
+  }
+}
